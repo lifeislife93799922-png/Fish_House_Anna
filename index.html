@@ -1,79 +1,90 @@
 <!DOCTYPE html>
-<html lang="ukr">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Рибний Дім Анна</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      overflow:hidden;
-      background:black;
-      font-family:Arial,sans-serif;
-    }
-
-    /* Блок на весь экран */
-    .hero{
-      position:relative;
-      width:100%;
-      height:100vh;
-
-      display:flex;
-      align-items:flex-start;
-      padding-top:100px;
-      justify-content:center;
-    }
-
-    /* Видео фон */
-    .hero video{
-      position:absolute;
-      top:0;
-      left:0;
-
-      width:100%;
-      height:100%;
-
-      object-fit:cover;
-
-      z-index:-2;
-    }
-
-    /* Затемнение */
-    .overlay{
-      position:absolute;
-      inset:0;
-
-      background:rgba(0,0,0,0.35);
-
-      z-index:-1;
-    }
-
-    /* Логотип */
-    .logo{
-      width:300px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <div class="header-container">
+
+      <!-- LOGO -->
+
+      <a href="#" class="logo">
+        <img src="media/logo-icon.png" alt="logo">
+      </a>
+
+      <!-- MENU -->
+
+      <nav class="nav">
+        <a href="#">Головна</a>
+        <a href="#">Продукція</a>
+        <a href="#">Доставка</a>
+        <a href="#">Контакти</a>
+        <a href="#">Про нас</a>
+      </nav>
+
+      <!-- INSTAGRAM -->
+
+      <a href="#" class="header-instagram">
+        Instagram
+      </a>
+
+    </div>
+
+  </header>
+
+  <!-- HERO -->
 
   <section class="hero">
 
-    <!-- ВИДЕО -->
+    <!-- VIDEO -->
+
     <video autoplay muted loop playsinline>
       <source src="video.mp4" type="video/mp4">
     </video>
 
-    <!-- затемнение -->
+    <!-- OVERLAY -->
+
     <div class="overlay"></div>
 
-    <!-- ЛОГО -->
-    <img class="logo" src="logo.png" alt="logo">
+    <!-- CONTENT -->
+
+    <div class="hero-content">
+
+      <!-- BIG LOGO -->
+
+      <img class="hero-logo" src="logo.png" alt="logo">
+
+      <!-- TWO LISTS -->
+
+      <div class="hero-lists">
+
+        <ul class="fish-list">
+          <li>Риба</li>
+          <li>Морепродукти</li>
+          <li>Напівфабрикати</li>
+          <li>Ікра</li>
+        </ul>
+
+        <ul class="fish-list">
+          <li>Лосось</li>
+          <li>Форель</li>
+          <li>Сири</li>
+          <li>Соуси</li>
+        </ul>
+
+      </div>
+
+    </div>
 
   </section>
 
