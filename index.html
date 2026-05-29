@@ -5,25 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Рибний Дім Анна</title>
 
+  <!-- Описание сайта для поисковиков (SEO) -->
+  <meta name="description" content="Рибний Дім Анна — свіжа риба, морепродукти, ікра з доставкою">
+
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-
+  <!-- =====================
+       HEADER — шапка сайта
+       Фиксированная, висит
+       поверх всего контента
+  ===================== -->
   <header class="header">
 
     <div class="header-container">
 
-      <!-- LOGO -->
-
+      <!-- Маленькое лого — кликабельное, ведёт на главную -->
       <a href="#" class="logo">
-        <img src="media/logo-icon.png" alt="logo">
+        <!-- alt описывает картинку для слепых и если картинка не загрузится -->
+        <img src="media/logo-icon.png" alt="Рибний Дім Анна — логотип">
       </a>
 
-      <!-- MENU -->
-
+      <!-- Навигация — nav это семантический тег специально для меню -->
       <nav class="nav">
         <a href="#">Головна</a>
         <a href="#">Продукція</a>
@@ -32,9 +49,10 @@
         <a href="#">Про нас</a>
       </nav>
 
-      <!-- INSTAGRAM -->
-
-      <a href="#" class="header-instagram">
+      <!-- Кнопка Instagram — пока ведёт на # (заглушка), потом вставь реальную ссылку -->
+      <!-- target="_blank" открывает в новой вкладке -->
+      <!-- rel="noopener" — защита при открытии внешних ссылок -->
+      <a href="https://www.instagram.com/fish_house.zp/" class="header-instagram" target="_blank" rel="noopener">
         Instagram
       </a>
 
@@ -42,32 +60,36 @@
 
   </header>
 
-  <!-- HERO -->
-
+  <!-- =====================
+       HERO — главный экран
+       Занимает всю высоту
+       окна браузера (100vh)
+  ===================== -->
   <section class="hero">
 
-    <!-- VIDEO -->
-
+    <!-- Фоновое видео — autoplay запускает само,
+         muted без звука (браузеры требуют это для autoplay),
+         loop повторяет по кругу,
+         playsinline нужен для iPhone чтобы не открывал на весь экран -->
     <video autoplay muted loop playsinline>
+      <!-- Можно добавить несколько форматов для разных браузеров -->
       <source src="video.mp4" type="video/mp4">
     </video>
 
-    <!-- OVERLAY -->
-
+    <!-- Затемнение поверх видео — пустой div,
+         стилизуется в CSS через rgba -->
     <div class="overlay"></div>
 
-    <!-- CONTENT -->
-
+    <!-- Весь контент hero — лого + списки -->
     <div class="hero-content">
 
-      <!-- BIG LOGO -->
+      <!-- Большое лого по центру экрана -->
+      <img class="hero-logo" src="logo.png" alt="Рибний Дім Анна">
 
-      <img class="hero-logo" src="logo.png" alt="logo">
-
-      <!-- TWO LISTS -->
-
+      <!-- Два списка рядом -->
       <div class="hero-lists">
 
+        <!-- Левый список -->
         <ul class="fish-list">
           <li>Риба</li>
           <li>Морепродукти</li>
@@ -75,18 +97,107 @@
           <li>Ікра</li>
         </ul>
 
+        <!-- Правый список -->
         <ul class="fish-list">
           <li>Лосось</li>
           <li>Форель</li>
           <li>Сири</li>
           <li>Соуси</li>
         </ul>
-
       </div>
-
-    </div>
+    </div> 
+    <a href="#" class="next-btn">ДАЛІ</a>
 
   </section>
+<section id="products" class="products-section">
+  <div class="interactive-bg"></div>
 
+  <div class="products-container">
+    <h2 class="section-title">Наша Продукція</h2>
+
+    <div class="product-row">
+      <h3 class="row-title">Свіжа риба та морепродукти</h3>
+      <div class="scroll-wrapper">
+        <div class="product-card">
+          <img src="media/salmon.jpg" alt="Лосось">
+          <div class="card-info">
+            <h4>Філе Лосося</h4>
+            <p>Слабосолене или свежемороженое премиум качества.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="media/shrimp.jpg" alt="Креветки">
+          <div class="card-info">
+            <h4>Королівські Креветки</h4>
+            <p>Крупные, сочные, сухая заморозка без лишнего льда.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="media/tuna.jpg" alt="Тунец">
+          <div class="card-info">
+            <h4>Стейк Тонця</h4>
+            <p>Плотное мясо, идеальное для гриля и обжарки.</p>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="product-row">
+      <h3 class="row-title">Ікра та делікатеси</h3>
+      <div class="scroll-wrapper">
+        <div class="product-card">
+          <img src="media/red-caviar.jpg" alt="Красная икра">
+          <div class="card-info">
+            <h4>Ікра Горбуші</h4>
+            <p>Зернистая, нежная, классический слабосоленый вкус.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="media/black-caviar.jpg" alt="Черная икра">
+          <div class="card-info">
+            <h4>Ікра Осетрова</h4>
+            <p>Эксклюзивный деликатес для особых моментов.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="media/cheese.jpg" alt="Сыры">
+          <div class="card-info">
+            <h4>Елітні Сири</h4>
+            <p>Идеальное дополнение к рыбным закускам.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-row">
+      <h3 class="row-title">Напівфабрикати та соуси</h3>
+      <div class="scroll-wrapper">
+        <div class="product-card">
+          <img src="media/cutlets.jpg" alt="Котлеты">
+          <div class="card-info">
+            <h4>Рибні Котлети</h4>
+            <p>Домашний рецепт, только натуральное мясо рыбы.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="media/sauce1.jpg" alt="Соус Тартар">
+          <div class="card-info">
+            <h4>Соус Тартар</h4>
+            <p>Фирменный соус, раскрывающий вкус белой рыбы.</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="media/frozen.jpg" alt="Стейки">
+          <div class="card-info">
+            <h4>Стейки Форелі</h4>
+            <p>Быстрая заморозка, готовы к запеканию.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<script src="script.js"></script>
 </body>
 </html>
