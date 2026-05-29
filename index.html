@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ukr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Рибний Дім Анна</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      overflow:hidden;
+      background:black;
+      font-family:Arial,sans-serif;
+    }
+
+    /* Блок на весь экран */
+    .hero{
+      position:relative;
+      width:100%;
+      height:100vh;
+
+      display:flex;
+      align-items:flex-start;
+      padding-top:100px;
+      justify-content:center;
+    }
+
+    /* Видео фон */
+    .hero video{
+      position:absolute;
+      top:0;
+      left:0;
+
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+
+      z-index:-2;
+    }
+
+    /* Затемнение */
+    .overlay{
+      position:absolute;
+      inset:0;
+
+      background:rgba(0,0,0,0.35);
+
+      z-index:-1;
+    }
+
+    /* Логотип */
+    .logo{
+      width:300px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+
+    <!-- ВИДЕО -->
+    <video autoplay muted loop playsinline>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <!-- затемнение -->
+    <div class="overlay"></div>
+
+    <!-- ЛОГО -->
+    <img class="logo" src="logo.png" alt="logo">
+
+  </section>
+
+</body>
+</html>
